@@ -18,10 +18,10 @@ export class App {
   protected readonly isScrolled = signal(false);
   protected readonly navItems = [
     { label: 'Home', path: '/' },
-    { label: 'Gallery', path: '/gallery' },
-    { label: 'Services', path: '/services' },
-    { label: 'Booking', path: '/booking' },
-    { label: 'Reviews', path: '/reviews' }
+    { label: 'Trabajos', path: '/gallery' },
+    { label: 'Servicios', path: '/services' },
+    { label: 'Reserva tu cita', path: '/booking' },
+    { label: 'Reseñas', path: '/reviews' }
   ];
 
   constructor() {
