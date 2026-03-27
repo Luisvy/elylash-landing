@@ -1,0 +1,7 @@
+/dist
+/node_modules
+/.angular
+.DS_Store
+Thumbs.db
+coverage
+/.vercel

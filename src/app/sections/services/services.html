@@ -1,0 +1,27 @@
+<section class="services">
+  <div class="section-heading">
+    <span class="eyebrow">Disenos exclusivos</span>
+    <h2 class="luxury-line">Looks creados para verse impecables de cerca y de lejos.</h2>
+    <p>
+      Cada set se adapta a la forma de tu ojo, al nivel de intensidad que te gusta
+      y al acabado final que quieres proyectar.
+    </p>
+  </div>
+
+  <div class="services__grid">
+    @for (service of services(); track service.name; let index = $index) {
+      <article class="services__card panel">
+        <div class="services__meta">
+          <span class="services__number">0{{ index + 1 }}</span>
+          <span class="services__tag">{{ service.tag }}</span>
+        </div>
+        <h3>{{ service.name }}</h3>
+        <p>{{ service.description }}</p>
+        <div class="services__footer">
+          <strong>Desde {{ service.price }}EUR</strong>
+          <span>Look personalizado</span>
+        </div>
+      </article>
+    }
+  </div>
+</section>

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Pinyon+Script&display=swap');
+
+:root {
+  --primary: #b78668;
+  --primary-soft: #ddc5b4;
+  --accent: #ede1d7;
+  --bg: #f6f0ea;
+  --bg-soft: #efe6de;
+  --surface: rgba(255, 255, 255, 0.82);
+  --surface-strong: #fffdfb;
+  --text: #201915;
+  --muted: #74655d;
+  --border: rgba(32, 25, 21, 0.1);
+  --border-strong: rgba(32, 25, 21, 0.16);
+  --shadow: 0 24px 60px rgba(35, 27, 22, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(183, 134, 104, 0.08), transparent 28%),
+    linear-gradient(180deg, #fbf7f2 0%, #f6f0ea 55%, #f2e9e1 100%);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+.display {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+}
+
+p {
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+section,
+footer {
+  width: min(1160px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.58);
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+.section-heading {
+  display: grid;
+  gap: 0.9rem;
+  max-width: 34rem;
+  margin-bottom: 2.5rem;
+}
+
+.section-heading h2 {
+  font-size: clamp(2.9rem, 6vw, 4.6rem);
+}
+
+.section-heading p {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.panel {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.68));
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.luxury-line {
+  position: relative;
+}
+
+.luxury-line::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.75rem;
+  width: 4rem;
+  height: 1px;
+  background: linear-gradient(90deg, var(--primary), transparent);
+}
+
+::selection {
+  background: rgba(183, 134, 104, 0.22);
+  color: var(--text);
+}

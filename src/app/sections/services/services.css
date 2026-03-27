@@ -1,0 +1,73 @@
+.services {
+  padding: 1rem 0 4.5rem;
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.services__card {
+  display: grid;
+  gap: 1rem;
+  min-height: 17rem;
+  padding: 1.5rem;
+}
+
+.services__meta,
+.services__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.services__number,
+.services__tag,
+.services__footer span {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.services__number {
+  color: rgba(32, 25, 21, 0.45);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.services__tag {
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: var(--bg-soft);
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.services h3 {
+  max-width: 8ch;
+  font-size: 2.1rem;
+}
+
+.services p {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.services__footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.services strong {
+  color: var(--text);
+  font-size: 0.98rem;
+}
+
+.services__footer span {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+}

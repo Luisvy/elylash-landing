@@ -1,0 +1,50 @@
+<section class="gallery">
+  <div class="gallery__header">
+    <!-- <div class="section-heading">
+       <span class="eyebrow">TRABAJOS A CLIENTAS</span>
+       <h2 class="luxury-line">A minimalist carousel ready for your best photos.</h2>
+      <p>
+        These blocks are prepared for a premium image slider. For now they work as elegant
+        placeholders, and later you can replace each one with your own photography.
+      </p>
+    </div> -->
+    <div class="gallery__controls">
+      <div class="gallery__hint panel">
+        <strong>Trabajos a clientas</strong>
+        <span>Diagnosticamos la mejor opción para tu mirada, luce perfecta.</span>
+      </div>
+
+      <div class="gallery__actions">
+        <button type="button" class="gallery__action" (click)="previous()">Previa</button>
+        <button type="button" class="gallery__action" (click)="next()">Siguiente</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery__track" #track>
+    @for (slide of slides(); track slide.title; let index = $index) {
+      <article class="gallery__card panel" [class.gallery__card--active]="activeIndex() === index">
+        <div class="gallery__media">
+          <img src="{{ slide.image }}">
+          <!-- <span>{{ slide.title }}</span> -->
+        </div>
+        <div class="gallery__meta">
+          <strong>{{ slide.title }}</strong>
+          <span>{{ slide.note }}</span>
+        </div>
+      </article>
+    }
+  </div>
+
+  <div class="gallery__dots">
+    @for (slide of slides(); track slide.title; let index = $index) {
+      <button
+        type="button"
+        class="gallery__dot"
+        [class.gallery__dot--active]="activeIndex() === index"
+        (click)="goToSlide(index)"
+        [attr.aria-label]="'Go to slide ' + (index + 1)">
+      </button>
+    }
+  </div>
+</section>

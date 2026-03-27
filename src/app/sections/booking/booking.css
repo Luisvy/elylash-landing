@@ -1,0 +1,78 @@
+#booking {
+  padding: 1rem 0;
+}
+
+.booking {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(320px, 1.2fr);
+  gap: 1.25rem;
+  padding: 1.25rem;
+}
+
+.booking__intro,
+.booking__form {
+  display: grid;
+  gap: 1rem;
+}
+
+.booking h2 {
+  font-size: clamp(2.9rem, 6vw, 4.2rem);
+}
+
+.booking p,
+.booking__notes span,
+.booking__summary strong {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+span.eyebrow {
+  justify-content: center;
+}
+
+.booking__notes {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.booking__notes div,
+.booking__summary {
+  display: grid;
+  gap: 0.35rem;
+  padding: 1rem 1.05rem;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.booking__notes strong,
+.booking__summary span {
+  color: var(--text);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.booking__summary strong {
+  color: var(--text);
+}
+
+.booking__widget-shell {
+  overflow: hidden;
+  border-radius: 26px;
+  border: 1px solid var(--border);
+  background: var(--surface-strong);
+}
+
+.calendly-inline-widget {
+  min-width: 320px;
+  height: 760px;
+  background: #fff;
+}
+
+@media (max-width: 860px) {
+  .booking {
+    grid-template-columns: 1fr;
+  }
+}

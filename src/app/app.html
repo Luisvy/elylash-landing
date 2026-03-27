@@ -1,0 +1,57 @@
+<div class="page">
+  <header
+    class="shell-nav"
+    [class.shell-nav--menu-open]="menuOpen()"
+    [class.shell-nav--scrolled]="isScrolled()">
+    <div class="shell-nav__bar">
+      <button
+        type="button"
+        class="shell-nav__brand"
+        [class.shell-nav__brand--active]="menuOpen()"
+        (click)="toggleMenu()"
+        aria-label="Open navigation menu"
+        [attr.aria-expanded]="menuOpen()">
+        <span class="shell-nav__brand-icon">
+          <img src="/assets/ElylashLogo.png" alt="Ely Lash Room logo">
+        </span>
+        <span class="shell-nav__brand-copy">
+          <strong>Ely Lash Room</strong>
+          <span class="shell-nav__brand-controls" aria-hidden="true">
+            <span class="shell-nav__brand-pill"></span>
+            <span class="shell-nav__brand-pill"></span>
+            <span class="shell-nav__brand-dot"></span>
+          </span>
+        </span>
+      </button>
+
+      <a class="shell-nav__home" routerLink="/" (click)="closeMenu()">
+        Home
+      </a>
+    </div>
+
+    <nav
+      class="shell-nav__panel"
+      [class.shell-nav__panel--open]="menuOpen()"
+      aria-label="Primary">
+      <div class="shell-nav__links">
+        @for (item of navItems; track item.path) {
+          <a
+            class="shell-nav__link"
+            [routerLink]="item.path"
+            routerLinkActive="shell-nav__link--active"
+            [routerLinkActiveOptions]="{ exact: item.path === '/' }"
+            (click)="closeMenu()">
+            <span class="shell-nav__link-label">{{ item.label }}</span>
+            <span class="shell-nav__link-meta">View section</span>
+          </a>
+        }
+      </div>
+    </nav>
+  </header>
+
+  <main class="page__content">
+    <router-outlet />
+  </main>
+
+  <app-footer />
+</div>
