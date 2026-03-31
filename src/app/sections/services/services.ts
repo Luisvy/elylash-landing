@@ -16,7 +16,7 @@ export class Services {
       tag: 'Mas pedido',
     },
     {
-      name: 'Volumen 3D',
+      name: 'Volumen 2D y 3D',
       price: 40,
       description: 'Definicion limpia y natural para un look pulido de todos los dias.',
       tag: 'Natural llamativo',
