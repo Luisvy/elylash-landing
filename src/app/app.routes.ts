@@ -6,7 +6,7 @@ import { Booking } from './sections/booking/booking';
 import { Reviews } from './sections/reviews/reviews';
 
 export const routes: Routes = [
-  { path: '', component: Hero, title: 'Ely Lash Room' },
+  { path: '', component: Hero, title: 'Ely, tu Lashista TOP ' },
   { path: 'gallery', component: Gallery, title: 'Mis trabajos | Ely Lash Room' },
   { path: 'services', component: Services, title: 'Servicios | Ely Lash Room' },
   { path: 'booking', component: Booking, title: 'Reserva | Ely Lash Room' },

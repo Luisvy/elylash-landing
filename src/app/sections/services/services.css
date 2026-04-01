@@ -23,6 +23,13 @@
   gap: 0.75rem;
 }
 
+.services__img {
+  width: 60%;
+  aspect-ratio: 16 / 13;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
 .services__number,
 .services__tag,
 .services__footer span {

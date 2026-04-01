@@ -11,7 +11,7 @@
   <div class="reviews__grid">
     @for (review of reviews(); track review.name; let index = $index) {
       <article class="reviews__card panel" [class.reviews__card--offset]="index === 1">
-        <span class="reviews__stars">05 stars</span>
+        <span class="reviews__stars">5 stars ⭐⭐⭐⭐⭐</span>
         <p>"{{ review.text }}"</p>
         <div>
           <strong>{{ review.name }}</strong>
